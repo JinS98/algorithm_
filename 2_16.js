@@ -78,3 +78,4 @@ function solution(names) {
 }
 
 solution(["nami", "ahri", "jayce", "garen", "ivern", "vex", "jinx"])
+solution(["nami", "ahri", "jayce", "garen", "ivern", "vew", "jins"])
