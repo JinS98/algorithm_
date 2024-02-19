@@ -104,3 +104,4 @@ function solution(numbers) {
 }
 
 solution("onetwothreefourfivesixseveneightnine")
+solution("onetwothreefourfivesixseveneightnine")
