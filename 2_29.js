@@ -1,22 +1,3 @@
-// 문자열 myString과 pat이 주어집니다. myString에서 pat이 등장하는 횟수를 return 하는 solution 함수를 완성해 주세요.
-function solution(myString, pat) {
-    let answer = 0;
-    let str = ""
-    for(let i = 0; i < myString.length;i++) {
-        str = myString.slice(i,i+pat.length)
-        if(str === pat) {
-          answer++
-          str = ""
-        }else{
-          str = ""
-        }
-    }
-    return answer
-}
-
-solution("banana",	"ana")
-
-
 // 정수가 있을 때, 짝수라면 반으로 나누고, 홀수라면 1을 뺀 뒤 반으로 나누면, 마지막엔 1이 됩니다. 예를 들어 10이 있다면 다음과 같은 과정으로 1이 됩니다.
 // 10 / 2 = 5
 // (5 - 1) / 2 = 2
