@@ -17,3 +17,32 @@ function solution(arr, query) {
 }
 
 solution([0, 1, 2, 3, 4, 5],	[4, 1, 2])
+
+// 최빈값은 주어진 값 중에서 가장 자주 나오는 값을 의미합니다. 정수 배열 array가 매개변수로 주어질 때, 최빈값을 return 하도록 solution 함수를 완성해보세요. 최빈값이 여러 개면 -1을 return 합니다.
+function solution(array) {
+    var answer = [];
+    let arr = []
+    for(let i = 0;i < array.length;i++){
+      if(arr[array[i]] === undefined){
+        arr[array[i]] = 1
+      }else{
+        arr[array[i]]++
+      } 
+    }
+  for(let i = 0; i < arr.length;i++) {
+    if(!arr[i]) arr[i] = 0
+  }
+    let max = Math.max(...arr)
+    arr.forEach((el, idx) => {
+      if(max === el) {
+        answer.push(idx)
+      }
+    })
+    if(answer.length !== 1) {
+      return -1
+    }else{
+      for(let i = 0; i < arr.length;i++) {
+        if(max === arr[i]) return i
+      }
+    }
+}
